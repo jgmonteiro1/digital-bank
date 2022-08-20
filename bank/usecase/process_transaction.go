@@ -33,6 +33,7 @@ func (u UseCaseTransaction) ProcessTransaction(transactionDto dto.Transaction) (
 		return domain.Transaction{}, err
 	}
 
+	return *t, nil
 }
 
 func (UseCaseTransaction) builderNewCreditCard(transactionDto dto.Transaction) *domain.CreditCard {
